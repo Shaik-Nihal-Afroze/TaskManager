@@ -6,7 +6,7 @@ import taskRoutes from "./routes/taskRoutes.js";
 
 const app = express()
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:["http://localhost:3000","https://task-manager-plum-eta.vercel.app"],
     credentials : true,
 }))
 app.use(express.json())
