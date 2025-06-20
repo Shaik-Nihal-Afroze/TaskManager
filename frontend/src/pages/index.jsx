@@ -8,7 +8,7 @@ const Home = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get(`https://taskmanager-wkty.onrender.com/tasks`);
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/tasks`);
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks", error);
